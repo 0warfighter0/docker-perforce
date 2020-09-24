@@ -1,4 +1,4 @@
-FROM 0warfighter0/perforce-base
+FROM FROM ambakshi/perforce-base
 MAINTAINER Amit Bakshi <ambakshi@gmail.com>
 
 ARG P4_VERSION
