@@ -1,4 +1,4 @@
-FROM ambakshi/perforce-base
+FROM 0warfighter0/perforce-base
 MAINTAINER Amit Bakshi <ambakshi@gmail.com>
 
 ARG P4_VERSION
@@ -13,7 +13,7 @@ RUN yum clean all --enablerepo='*' \
 EXPOSE 1666
 ENV NAME p4depot
 ENV P4CONFIG .p4config
-ENV DATAVOLUME /data
+ENV DATAVOLUME /mnt/p4_volume
 ENV P4PORT 1666
 ENV P4USER p4admin
 VOLUME ["$DATAVOLUME"]
