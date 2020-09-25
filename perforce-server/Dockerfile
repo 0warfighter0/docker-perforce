@@ -1,4 +1,4 @@
-FROM FROM ambakshi/perforce-base
+FROM ambakshi/perforce-base
 MAINTAINER Amit Bakshi <ambakshi@gmail.com>
 
 ARG P4_VERSION
