@@ -3,6 +3,10 @@ MAINTAINER Amit Bakshi <ambakshi@gmail.com>
 
 ARG P4_VERSION
 
+RUN echo /etc/yum.conf
+RUN sed 's/^timeout=30$/timeout=60/' /etc/yum.conf
+RUN echo /etc/yum.conf
+
 RUN yum clean all --enablerepo='*' \
     && yum clean metadata --enablerepo='*' \
     && yum install --enablerepo=perforce -y helix-p4d-20${P4_VERSION} helix-cli-20${P4_VERSION} \
