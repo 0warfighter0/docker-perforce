@@ -7,10 +7,7 @@ RUN echo /etc/yum.conf
 RUN sed 's/^timeout=30$/timeout=60/' /etc/yum.conf
 RUN echo /etc/yum.conf
 
-RUN echo /etc/yum.conf \
-    && sed 's/^timeout=30$/timeout=60/' /etc/yum.conf \
-    && echo /etc/yum.conf \
-    && yum clean all --enablerepo='*' \
+RUN yum clean all --enablerepo='*' \
     && yum clean metadata --enablerepo='*' \
     && yum install --enablerepo=perforce -y helix-p4d-20${P4_VERSION} helix-cli-20${P4_VERSION} \
     && yum clean all --enablerepo='*' \
